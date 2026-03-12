@@ -1,0 +1,78 @@
+# Starship設定ファイル - シンプル版
+
+# タイムアウト設定
+command_timeout = 500
+
+# 新しい行で開始
+add_newline = true
+
+# フォーマット定義（表示順序）
+format = """
+$directory\
+$git_branch\
+$git_status\
+$nodejs\
+$python\
+$rust\
+$golang\
+$line_break\
+$character"""
+
+# ディレクトリ
+[directory]
+truncation_length = 0  # 0で無制限（絶対パス全体を表示）
+truncate_to_repo = false  # リポジトリルートからではなくフルパスを表示
+style = "bold cyan"
+format = "[$path]($style) "
+truncation_symbol = "…/"
+
+# Gitブランチ
+[git_branch]
+symbol = ""
+style = "bold purple"
+format = "[$symbol$branch]($style) "
+
+# Gitステータス
+[git_status]
+style = "bold red"
+format = "([$all_status$ahead_behind]($style))"
+conflicted = "="
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+untracked = "?"
+stashed = "\\$"
+modified = "!"
+staged = "+"
+renamed = "»"
+deleted = "✘"
+
+# プロンプト文字
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+vicmd_symbol = "[❮](bold green)"
+
+# Node.js
+[nodejs]
+symbol = "node "
+style = "bold green"
+format = "[$symbol$version]($style) "
+
+# Python
+[python]
+symbol = "py "
+style = "bold yellow"
+format = "[$symbol$version]($style) "
+
+# Rust
+[rust]
+symbol = "rs "
+style = "bold red"
+format = "[$symbol$version]($style) "
+
+# Go
+[golang]
+symbol = "go "
+style = "bold cyan"
+format = "[$symbol$version]($style) "

@@ -1,0 +1,9 @@
+#--- general ---#
+.DS_Store
+*.log
+
+#--- zsh ---#
+.zsh_history
+.zcompdump
+.zsh_sessions
+90-local.zsh
