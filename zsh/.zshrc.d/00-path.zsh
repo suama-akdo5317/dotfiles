@@ -34,3 +34,6 @@ export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin"
 
 # zoxide
 eval "$(zoxide init zsh)"
+
+# claude code
+export PATH="$HOME/.local/bin:$PATH"
