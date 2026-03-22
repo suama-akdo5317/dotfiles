@@ -56,6 +56,9 @@ alias hg='history | grep'
 # 現在のディレクトリをFinderで開く
 alias finder='open .'
 
+# fzfでファイルを選択してそのディレクトリにcd
+alias cdf='cd "$(dirname "$(fzf --preview="bat --color=always {}")")"'
+
 # IPアドレス確認
 alias myip='curl -s https://httpbin.org/ip | jq -r .origin'
 

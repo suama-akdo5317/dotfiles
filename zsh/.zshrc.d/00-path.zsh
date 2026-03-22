@@ -33,7 +33,7 @@ export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/
 export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin"
 
 # zoxide
-eval "$(zoxide init zsh)"
+eval "$(zoxide init zsh --no-cmd)"
 
 # claude code
 export PATH="$HOME/.local/bin:$PATH"

@@ -44,3 +44,7 @@ bindkey '^_' undo                   # Ctrl+_（標準）
 # - Ctrl+U / Ctrl+K      : 行頭/行末まで削除
 # - Ctrl+P / Ctrl+N      : 履歴を前後に移動
 # - Option+Z / Ctrl+_    : 元に戻す
+
+# fzf の Alt+C (Esc+c) バインドを無効化
+# Esc を押した後に c を押すと fzf が起動してしまうのを防ぐ
+bindkey -r '\ec'
