@@ -8,12 +8,6 @@ function M.apply_to_config(config)
   -- ハイパーリンクのルール
   config.hyperlink_rules = wezterm.default_hyperlink_rules()
 
-  -- ファイルパスをハイパーリンクとして認識（/path/to/file:行番号）
-  table.insert(config.hyperlink_rules, {
-    regex = [[\b\w+://[^\s]+\b]],
-    format = '$0',
-  })
-
   -- GitHubのissue/PR番号を認識 (#123)
   table.insert(config.hyperlink_rules, {
     regex = [[\b#(\d+)\b]],

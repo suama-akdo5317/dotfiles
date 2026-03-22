@@ -6,8 +6,7 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
--- デバッグモードを有効にする
-config.debug_key_events = true
+config.debug_key_events = false
 
 -- 設定ファイルが格納されているディレクトリのパスを取得
 local config_dir = wezterm.config_dir

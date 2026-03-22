@@ -8,7 +8,6 @@ function M.apply_to_config(config)
   -- マルチプレクサ機能の設定
   config.use_ime = true
   config.default_cwd = "~"
-  config.enable_tab_bar = true
   config.use_fancy_tab_bar = false
   config.exit_behavior = "Close"
 

@@ -4,11 +4,7 @@ local wezterm = require 'wezterm'
 local M = {}
 
 function M.apply_to_config(config)
-  config.font = wezterm.font("JetBrains Mono")
   config.color_scheme = "Dracula"
-
-  -- フォントサイズ
-  config.font_size = 13.0
 
   -- 背景透過
   config.window_background_opacity = 0.85
@@ -33,19 +29,19 @@ function M.apply_to_config(config)
   }
 
   -- タブバーの設定
-  config.use_fancy_tab_bar = true
   config.tab_bar_at_bottom = true
 
   -- ペインの境界線を太くする
   config.window_frame = {
-    border_thickness = 2,
+    border_left_width = "2px",
+    border_right_width = "2px",
+    border_top_height = "2px",
+    border_bottom_height = "2px",
     -- Draculaテーマに合わせたタイトルバーの色
     active_titlebar_bg = "#282a36",    -- Draculaの背景色
     inactive_titlebar_bg = "#1e1f29",  -- より暗い背景色
   }
 
-  -- ウィンドウタイトルをカスタマイズ
-  config.window_title = "WezTerm"
 end
 
 -- タブタイトルのカスタマイズ
