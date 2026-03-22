@@ -37,3 +37,6 @@ eval "$(zoxide init zsh --no-cmd)"
 
 # claude code
 export PATH="$HOME/.local/bin:$PATH"
+
+# Browser-Use
+export PATH="/Users/kwuz/.browser-use-env/bin:/Users/kwuz/.local/bin:$PATH"
