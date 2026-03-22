@@ -6,12 +6,12 @@
 # 基本エイリアス
 # =============================================================================
 
-# ls (exa)
-alias ls='exa --time-style=long-iso -g'
-alias ll='exa --git --time-style=long-iso -gl'
-alias la='exa --git --time-style=long-iso -agl'
-alias l1='exa -1'
-alias l='exa -CF'           # カラム表示
+# ls (eza)
+alias ls='eza --time-style=long-iso -g'
+alias ll='eza --git --time-style=long-iso -gl'
+alias la='eza --git --time-style=long-iso -agl'
+alias l1='eza -1'
+alias l='eza -CF'           # カラム表示
 
 # 設定の再読み込み
 alias source-zshrc="source ~/.config/zsh/.zshrc"
