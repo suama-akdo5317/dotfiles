@@ -39,4 +39,4 @@ eval "$(zoxide init zsh --no-cmd)"
 export PATH="$HOME/.local/bin:$PATH"
 
 # Browser-Use
-export PATH="/Users/kwuz/.browser-use-env/bin:/Users/kwuz/.local/bin:$PATH"
+alias browser-use="$HOME/.browser-use-env/bin/browser-use"
