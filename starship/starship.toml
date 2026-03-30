@@ -15,6 +15,7 @@ $nodejs\
 $python\
 $rust\
 $golang\
+$time\
 $line_break\
 $character"""
 
@@ -25,10 +26,11 @@ truncate_to_repo = false  # リポジトリルートからではなくフルパ�
 style = "bold cyan"
 format = "[$path]($style) "
 truncation_symbol = "…/"
+read_only = " "
 
 # Gitブランチ
 [git_branch]
-symbol = ""
+symbol = " "
 style = "bold purple"
 format = "[$symbol$branch]($style) "
 
@@ -55,24 +57,29 @@ vicmd_symbol = "[❮](bold green)"
 
 # Node.js
 [nodejs]
-symbol = "node "
+symbol = " "
 style = "bold green"
 format = "[$symbol$version]($style) "
 
 # Python
 [python]
-symbol = "py "
+symbol = " "
 style = "bold yellow"
 format = "[$symbol$version]($style) "
 
 # Rust
 [rust]
-symbol = "rs "
+symbol = " "
 style = "bold red"
 format = "[$symbol$version]($style) "
 
 # Go
 [golang]
-symbol = "go "
+symbol = " "
 style = "bold cyan"
 format = "[$symbol$version]($style) "
+
+[time]
+disabled = false
+style = "cyan"
+format = '[\[$time\]]($style) '
