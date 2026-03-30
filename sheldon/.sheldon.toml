@@ -1,0 +1,25 @@
+shell = "zsh"
+
+# デフォルトを遅延読み込みにする
+apply = ['defer']
+
+[plugins.zsh-defer]
+github = "romkatv/zsh-defer"
+apply = ["source"]
+
+[templates]
+defer = "{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}"
+
+# シンタックスハイライト（遅延読み込み）
+[plugins.zsh-syntax-highlighting]
+github = "zsh-users/zsh-syntax-highlighting"
+
+# 入力補完サジェスト（即時読み込み - 遅延だとサジェスト表示が遅れる）
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+apply = ["source"]
+
+# 履歴サブストリング検索（即時読み込み）
+[plugins.zsh-history-substring-search]
+github = "zsh-users/zsh-history-substring-search"
+apply = ["source"]
