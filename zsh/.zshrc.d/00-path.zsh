@@ -40,3 +40,6 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # Browser-Use
 alias browser-use="$HOME/.browser-use-env/bin/browser-use"
+
+# Claude Code + Serena MCP: ツール読み込みを最適化してレスポンスを速くする
+export ENABLE_TOOL_SEARCH=true
