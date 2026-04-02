@@ -16,17 +16,9 @@
     ├── mcp.json               # MCP サーバー定義
     ├── .textlintrc.json       # textlint 設定
     ├── agents/                # カスタムサブエージェント定義
-    │   ├── backend-design-expert.md
-    │   ├── backend-implementation-engineer.md
-    │   ├── frontend-design-expert.md
-    │   └── frontend-implementation-engineer.md
     ├── commands/              # カスタムスラッシュコマンド（スキル）
-    │   ├── agent-browser/
-    │   ├── agent-memory/
-    │   ├── bug-investigation/
-    │   ├── code-review/
-    │   ├── design-principles/
-    │   └── textlint/
+    ├── plugins/               # Claude Code プラグイン（git submodule で管理）
+    │   └── everything-claude-code/   # https://github.com/affaan-m/everything-claude-code
     └── scripts/               # MCP サーバー起動ラッパースクリプト（1Password 連携）
         ├── .env               # Kibela 接続先設定
         ├── context7-mcp.sh
@@ -53,11 +45,25 @@
 - `file-history/` / `session-env/` / `sessions/` / `shell-snapshots/` — セッション系
 - `cache/` / `downloads/` / `paste-cache/` / `debug/` — キャッシュ・一時ファイル
 - `statsig/` / `telemetry/` / `stats-cache.json` / `policy-limits.json` — 計測・ポリシー
-- `backups/` / `ide/` / `todos/` / `plugins/` — ランタイム生成
+- `backups/` / `ide/` / `todos/` — ランタイム生成
 - `projects/` — プロジェクト別メモリ（機密情報を含む可能性）
 - `settings.local.json` — マシン固有設定
 
 ## 新マシンでのセットアップ
+
+### 1. clone（submodule 込み）
+
+```zsh
+git clone --recurse-submodules https://github.com/kwuz/.dotfiles.git ~/.dotfiles
+```
+
+既存の clone に submodule を後から取得する場合:
+
+```zsh
+git submodule update --init --recursive
+```
+
+### 2. シムリンクの作成
 
 ```zsh
 DOTFILES="$HOME/.dotfiles"
@@ -74,4 +80,17 @@ ln -sfn "$DOTFILES/.claude/commands"         "$CLAUDE/commands"
 # CCManager
 mkdir -p "$HOME/.config/ccmanager"
 ln -sf  "$DOTFILES/ccmanager/config.json"    "$HOME/.config/ccmanager/config.json"
+```
+
+### 3. プラグインのセットアップ
+
+```zsh
+# インストールスクリプトを実行（agents / commands / skills 等を ~/.claude/ に展開）
+bash "$HOME/.dotfiles/.claude/plugins/everything-claude-code/install.sh"
+```
+
+## プラグインの更新
+
+```zsh
+git submodule update --remote .claude/plugins/everything-claude-code
 ```

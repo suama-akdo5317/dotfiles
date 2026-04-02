@@ -23,7 +23,6 @@
 .claude/backups/
 .claude/ide/
 .claude/todos/
-.claude/plugins/
 .claude/statsig/
 .claude/telemetry/
 .claude/stats-cache.json

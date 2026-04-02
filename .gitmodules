@@ -1,0 +1,4 @@
+[submodule ".claude/plugins/everything-claude-code"]
+	path = .claude/plugins/everything-claude-code
+	url = https://github.com/affaan-m/everything-claude-code.git
+	ignore = untracked
