@@ -1,6 +1,4 @@
 #--- general ---#
-.DS_Store
-*.log
 
 #--- zsh ---#
 .zsh_history
@@ -31,8 +29,3 @@
 .claude/stats-cache.json
 .claude/policy-limits.json
 .claude/projects/
-
-# machine-local settings
-.claude/settings.local.json
-
-.env
