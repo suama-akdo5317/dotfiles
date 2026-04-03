@@ -53,10 +53,10 @@
 
 ## Nerd Font 対応
 
-**ファイル:** `wezterm/modules/fonts.lua`, `starship/starship.toml`, `brew/Brewfile`
+**ファイル:** `ghostty/config`, `starship/starship.toml`, `brew/Brewfile`
 
 - **フォント:** `Hack Nerd Font`（`font-hack-nerd-font` cask でインストール）
-- **wezterm:** フォントサイズ 14.0 で Hack Nerd Font を使用
+- **ghostty:** フォントサイズ 16 で Hack Nerd Font を使用
 
 **starship アイコン:**
 

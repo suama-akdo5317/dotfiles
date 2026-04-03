@@ -85,7 +85,7 @@ cask "copilot-cli"            # AWS Copilot CLI
 cask "keyclu"                 # キーボードショートカット一覧表示
 cask "session-manager-plugin" # AWS Session Manager Plugin
 cask "font-hack-nerd-font"    # Nerd Font パッチ済みフォント
-cask "wezterm"                # ターミナルエミュレータ
+cask "ghostty"                # ターミナルエミュレータ
 
 # ============================================================
 # VS Code Extensions
