@@ -1,0 +1,90 @@
+# =============================================================
+# Ghostty Configuration
+# Migrated from WezTerm config
+# =============================================================
+
+# --- Theme ---
+theme = Dracula
+
+# --- Font ---
+font-family = "Hack Nerd Font"
+font-size = 16
+
+# --- Background ---
+background-opacity = 0.85
+
+# --- Window ---
+window-padding-x = 4
+window-padding-y = 4
+
+# --- Tab Bar ---
+# WezTerm: tab_bar_at_bottom = true / use_fancy_tab_bar = false
+macos-titlebar-style = tabs
+
+# --- Behavior ---
+scrollback-limit = 10000
+mouse-hide-while-typing = true
+
+# IME support (WezTerm: use_ime = true)
+macos-option-as-alt = false
+
+# Bell disabled (WezTerm: audible_bell = "Disabled" + visual_bell)
+# Ghostty 1.1+
+# bell-features = none
+
+# --- Inactive Pane Dimming ---
+# WezTerm: inactive_pane_hsb = { saturation = 0.8, brightness = 0.3 }
+unfocused-split-opacity = 0.3
+
+# --- Keybindings ---
+
+# Tab management
+keybind = ctrl+shift+t=new_tab
+keybind = ctrl+shift+w=close_tab
+keybind = ctrl+tab=next_tab
+keybind = ctrl+shift+tab=previous_tab
+
+# Pane split
+keybind = ctrl+shift+v=new_split:right
+keybind = ctrl+shift+h=new_split:down
+
+# Pane close
+keybind = ctrl+shift+x=close_surface
+
+# Pane navigation
+keybind = ctrl+shift+left=goto_split:left
+keybind = ctrl+shift+right=goto_split:right
+keybind = ctrl+shift+up=goto_split:up
+keybind = ctrl+shift+down=goto_split:down
+
+# Pane zoom toggle
+keybind = ctrl+shift+z=toggle_split_zoom
+
+# Pane resize
+keybind = ctrl+shift+alt+left=resize_split:left,10
+keybind = ctrl+shift+alt+right=resize_split:right,10
+keybind = ctrl+shift+alt+up=resize_split:up,10
+keybind = ctrl+shift+alt+down=resize_split:down,10
+
+# Font size
+keybind = ctrl+equal=increase_font_size:1
+keybind = ctrl+minus=decrease_font_size:1
+keybind = ctrl+zero=reset_font_size
+
+# New window
+keybind = ctrl+shift+n=new_window
+
+# Fullscreen
+keybind = f11=toggle_fullscreen
+
+# Quick terminal (Ghostty feature, no WezTerm equivalent)
+# keybind = global:ctrl+grave_accent=toggle_quick_terminal
+
+# --- Not migrated (WezTerm-specific) ---
+# - Ctrl+V paste: Ghostty handles Cmd+V / Ctrl+V natively
+# - Ctrl+Shift+F search: Ghostty has built-in search (Cmd+F on macOS)
+# - Ctrl+Shift+Space quick select: No Ghostty equivalent
+# - Ctrl+Shift+P command palette: No Ghostty equivalent
+# - Shift+Enter send escape: Shell-level config instead
+# - Custom tab title (Lua event): Not supported in Ghostty
+# - Custom hyperlink rules: Not supported in Ghostty
