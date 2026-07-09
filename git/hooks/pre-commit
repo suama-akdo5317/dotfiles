@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+# gitleaks による秘匿情報スキャン（全リポジトリ共通）
+
+if ! command -v gitleaks &>/dev/null; then
+    echo "WARNING: gitleaks is not installed. Skipping secret scan."
+    echo "Install: brew install gitleaks"
+    exit 0
+fi
+
+gitleaks git --pre-commit --staged --redact
+exit_code=$?
+
+if [ $exit_code -ne 0 ]; then
+    echo ""
+    echo "gitleaks: secrets detected in staged changes."
+    echo "To allow a specific pattern, update ~/.config/gitleaks/.gitleaks.toml"
+    echo "To skip this check once: SKIP=gitleaks git commit ..."
+    exit 1
+fi
+
+# core.hooksPath 使用時、リポジトリ固有の pre-commit hook があれば実行
+repo_hook="$(git rev-parse --git-dir)/hooks/pre-commit"
+if [ -x "$repo_hook" ]; then
+    exec "$repo_hook" "$@"
+fi

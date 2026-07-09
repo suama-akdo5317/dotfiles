@@ -1,0 +1,15 @@
+title = "Global gitleaks config"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Global allowlist"
+regexTarget = "match"
+regexes = [
+    '''AKIAIOSFODNN7EXAMPLE''',
+    '''wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY''',
+]
+paths = [
+    '''(.*?)(package-lock\.json|yarn\.lock|pnpm-lock\.yaml|Podfile\.lock|go\.sum|Cargo\.lock)''',
+]

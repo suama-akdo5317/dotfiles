@@ -4,6 +4,9 @@ export XDG_CACHE_HOME=${HOME}/.cache
 export XDG_DATA_HOME=${HOME}/.local/share
 export XDG_STATE_HOME=${HOME}/.local/state
 
+# gitleaks
+# export GITLEAKS_CONFIG="${XDG_CONFIG_HOME}/gitleaks/.gitleaks.toml"
+
 # path
 export PATH=${HOME}/.local/bin:$PATH
 export PATH="/usr/local/sbin:$PATH"

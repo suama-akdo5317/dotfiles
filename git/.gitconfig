@@ -11,6 +11,7 @@
 [core]
     pager = delta
     excludesfile = ~/.config/git/ignore
+    # hooksPath = ~/.config/git/hooks
 
 [interactive]
     diffFilter = delta --color-only
