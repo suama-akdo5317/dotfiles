@@ -24,9 +24,8 @@ brew "cryptography"      # Pythonの暗号ライブラリ
 brew "direnv"            # ディレクトリごとに .envrc で環境変数を管理
 brew "fzf"               # ファジーファインダー
 brew "mise"              # 言語バージョン管理 (node/ruby/python等)
-brew "overmind"          # Procfileベースのプロセスマネージャー
 brew "starship"          # シェルプロンプト
-brew "tmux"              # ターミナルマルチプレクサ
+brew "herdr"             # ターミナルで動くエージェントマルチプレクサ
 brew "sheldon"           # zsh プラグインマネージャ（遅延読み込み対応）
 brew "zoxide"            # スマートな cd コマンド
 
@@ -64,7 +63,6 @@ brew "bearer/tap/bearer" # APIセキュリティスキャン
 # AWS
 # ============================================================
 brew "aws-sso-cli"                  # AWS SSO 認証管理
-brew "aws-vault", link: false       # AWS認証情報のセキュアな管理
 brew "awscli"                       # AWS CLI
 brew "cloudflared"                  # Cloudflare Tunnel
 
@@ -74,18 +72,21 @@ brew "cloudflared"                  # Cloudflare Tunnel
 brew "http-server"                  # 簡易HTTPサーバー (静的ファイル確認用)
 brew "lazydocker"                   # Docker管理TUI
 brew "mysql-client@8.0", link: true # MySQLクライアント
+brew "openjdk@17"                   # Java 17 開発キット
 brew "ariga/tap/atlas", link: false # DBスキーママイグレーション
 
 # ============================================================
 # Cask (GUI / Binary)
 # ============================================================
-cask "1password-cli"          # 1Password CLI
-cask "aws-vault-binary"       # aws-vault バイナリ (brew版と併用)
-cask "copilot-cli"            # AWS Copilot CLI
-cask "keyclu"                 # キーボードショートカット一覧表示
-cask "session-manager-plugin" # AWS Session Manager Plugin
-cask "font-hack-nerd-font"    # Nerd Font パッチ済みフォント
-cask "ghostty"                # ターミナルエミュレータ
+cask "1password-cli"            # 1Password CLI
+cask "android-commandlinetools" # Android SDK コマンドラインツール
+cask "aws-vault-binary"         # AWS認証情報のセキュアな管理
+cask "codexbar"                 # Codex/Claudeの使用量を表示するメニューバーアプリ
+cask "copilot-cli"              # AWS Copilot CLI
+cask "keyclu"                   # キーボードショートカット一覧表示
+cask "session-manager-plugin"   # AWS Session Manager Plugin
+cask "font-hack-nerd-font"      # Nerd Font パッチ済みフォント
+cask "ghostty"                  # ターミナルエミュレータ
 
 # ============================================================
 # VS Code Extensions
@@ -145,6 +146,3 @@ vscode "github.copilot-chat"             # GitHub Copilot
 
 # --- Locale ---
 vscode "ms-ceintl.vscode-language-pack-ja" # 日本語UIパック
-
-# --- Legacy / Misc ---
-vscode "withfig.fig"                     # Fig (補完ツール、現在はWarp等に統合)

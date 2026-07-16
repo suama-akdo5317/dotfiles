@@ -28,7 +28,7 @@ git commit -m "brew: add <package>"
 ### 環境を再現するとき（新しいMacなど）
 
 ```bash
-brew bundle install --file=~/.dotfiles/Brewfile
+brew bundle install --file=~/.dotfiles/brew/Brewfile
 ```
 
 ### 注意点
