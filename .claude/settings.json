@@ -13,9 +13,9 @@
   "permissions": {
     "allow": [
       "Read(**)",
-      "Write(src/**)",
-      "Write(docs/**)",
-      "Write(.tmp/**)",
+      "Edit(src/**)",
+      "Edit(docs/**)",
+      "Edit(.tmp/**)",
       "Bash(pnpm install:*)",
       "Bash(pnpm run test:*)",
       "Bash(pnpm run build:*)",
@@ -42,8 +42,8 @@
       "Read(**/*.p12)",
       "Read(**/*.token)",
       "Read(**/*credentials*)",
-      "Write(.env*)",
-      "Write(**/secrets/**)",
+      "Edit(.env*)",
+      "Edit(**/secrets/**)",
       "Bash(curl:*)",
       "Bash(wget:*)",
       "Bash(nc:*)",
