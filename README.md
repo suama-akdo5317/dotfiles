@@ -12,6 +12,7 @@ macOS開発環境の設定を一元管理するdotfilesリポジトリ。シン�
 ├── docs/          # 機能一覧・キーバインドなどの補足ドキュメント
 ├── ghostty/       # Ghostty ターミナル設定
 ├── git/           # Git設定（.gitconfig, hooks, gitleaks）
+├── herdr/         # herdr（AIコーディングエージェント向けターミナルワークスペースマネージャ）設定
 ├── sheldon/       # zshプラグインマネージャ設定
 ├── starship/      # クロスシェルプロンプト設定
 ├── tmux/          # tmux設定（TPMプラグイン管理）
@@ -76,6 +77,9 @@ ln -sf "$DOTFILES/tmux/.tmux.conf" "$HOME/.tmux.conf"
 
 # ghostty
 ln -sf "$DOTFILES/ghostty/config" "$HOME/.config/ghostty/config"
+
+# herdr
+ln -sf "$DOTFILES/herdr/config.toml" "$HOME/.config/herdr/config.toml"
 ```
 
 Claude Code / Agent Skills 関連のシムリンクは [.claude/README.md](.claude/README.md) と [.agents/README.md](.agents/README.md) を参照。

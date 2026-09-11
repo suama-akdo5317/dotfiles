@@ -1,0 +1,21 @@
+onboarding = false
+[ui]
+agent_panel_sort = "priority"
+
+[theme]
+name = "solarized"
+auto_switch = false
+
+[keys]
+previous_tab = "cmd+alt+left"
+next_tab = "cmd+alt+right"
+new_tab = "ctrl+shift+t"
+close_tab = "ctrl+shift+w"
+split_vertical = "ctrl+shift+v"
+split_horizontal = "ctrl+shift+h"
+close_pane = "ctrl+shift+x"
+focus_pane_left = "ctrl+shift+left"
+focus_pane_down = "ctrl+shift+down"
+focus_pane_up = "ctrl+shift+up"
+focus_pane_right = "ctrl+shift+right"
+zoom = "ctrl+shift+z"

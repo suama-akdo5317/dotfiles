@@ -39,26 +39,38 @@ unfocused-split-opacity = 0.3
 # --- Keybindings ---
 
 # Tab management
-keybind = ctrl+shift+t=new_tab
-keybind = ctrl+shift+w=close_tab
 keybind = ctrl+tab=next_tab
 keybind = ctrl+shift+tab=previous_tab
 
+# Unbound so herdr can use ctrl+shift+t/w for its own tab new/close
+keybind = ctrl+shift+t=unbind
+keybind = ctrl+shift+w=unbind
+
 # Pane split
-keybind = ctrl+shift+v=new_split:right
-keybind = ctrl+shift+h=new_split:down
+# Unbound so herdr can use ctrl+shift+v/h for its own pane split
+keybind = ctrl+shift+v=unbind
+keybind = ctrl+shift+h=unbind
 
 # Pane close
-keybind = ctrl+shift+x=close_surface
+# Unbound so herdr can use ctrl+shift+x for its own pane close
+keybind = ctrl+shift+x=unbind
 
 # Pane navigation
-keybind = ctrl+shift+left=goto_split:left
-keybind = ctrl+shift+right=goto_split:right
-keybind = ctrl+shift+up=goto_split:up
-keybind = ctrl+shift+down=goto_split:down
+# Unbound so herdr can use ctrl+shift+arrows for its own pane focus movement
+keybind = ctrl+shift+left=unbind
+keybind = ctrl+shift+right=unbind
+keybind = ctrl+shift+up=unbind
+keybind = ctrl+shift+down=unbind
+
+# Unbind default cmd+option+arrow (pane navigation) so herdr/tmux etc. can use it
+keybind = super+alt+left=unbind
+keybind = super+alt+right=unbind
+keybind = super+alt+up=unbind
+keybind = super+alt+down=unbind
 
 # Pane zoom toggle
-keybind = ctrl+shift+z=toggle_split_zoom
+# Unbound so herdr can use ctrl+shift+z for its own pane zoom
+keybind = ctrl+shift+z=unbind
 
 # Pane resize
 keybind = ctrl+shift+alt+left=resize_split:left,10
