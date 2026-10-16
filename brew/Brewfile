@@ -33,6 +33,7 @@ brew "zoxide"            # スマートな cd コマンド
 # File / Text Tools
 # ============================================================
 brew "bat"               # cat の代替 (シンタックスハイライト付き)
+brew "curl"              # HTTPクライアント (keg-only: PATHは 00-path.zsh で追加)
 brew "eza"               # ls の代替
 brew "fd"                # find の代替
 brew "jq"                # JSONプロセッサ

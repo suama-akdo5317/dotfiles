@@ -20,6 +20,9 @@ eval "$(direnv hook zsh)"
 # eval "$(/opt/homebrew/bin/mise activate zsh)"
 eval "$(mise activate zsh)"
 
+# curl は keg-only のため明示的に PATH を通す（mise activate が PATH を並べ替えるため、その後に置く）
+export PATH="$HOMEBREW_PREFIX/opt/curl/bin:$PATH"
+
 # 1Password SSH Agent
 # Note: SSHエージェント機能のみを使用する場合、op signinは不要
 export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
